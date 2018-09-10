@@ -252,7 +252,7 @@ module Fastlane
 
       def self.example_code
         [
-          'dropbox(
+          'publish_dropbox(
             file_path: "./path/to/file.txt",
             dropbox_path: "/My Dropbox Folder/Text files",
             write_mode: "add/overwrite/update",
