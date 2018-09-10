@@ -232,7 +232,8 @@ module Fastlane
                                        type: String,
                                        optional: true,
                                        verify_block: proc do |value|
-                                         UI.user_error!("App Token not specified for Dropbox app. Provide your app's App Key or create a new app at https://www.dropbox.com/developers if you don't have an app yet.") unless File.exist?(value),
+                                         UI.user_error!("App Token not specified for Dropbox app. Provide your app's App Key or create a new app at https://www.dropbox.com/developers if you don't have an app yet.") unless File.exist?(value)
+                                       end),
           FastlaneCore::ConfigItem.new(key: :keychain,
                                        env_name: 'DROPBOX_KEYCHAIN',
                                        description: 'Path to keychain where the access token would be stored. Will use default keychain if no value is provided',
