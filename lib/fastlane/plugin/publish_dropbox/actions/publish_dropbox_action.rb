@@ -226,13 +226,13 @@ module Fastlane
                                        verify_block: proc do |value|
                                          UI.user_error!("App Secret not specified for Dropbox app. Provide your app's App Secret or create a new app at https://www.dropbox.com/developers if you don't have an app yet.") unless value && !value.empty?
                                        end),
-          FastlaneCore::ConfigItem.new(key: :keychain,
-                                       env_name: 'DROPBOX_TOKEN',
-                                       description: "Provide your app's App Token or create a new app at https://www.dropbox.com/developers if you don't have an app yet.",
+          FastlaneCore::ConfigItem.new(key: :app_token,
+                                       env_name: 'DROPBOX_APP_TOKEN',
+                                       description: 'App Token of your Dropbox app',
                                        type: String,
                                        optional: true,
                                        verify_block: proc do |value|
-                                         UI.user_error!("App Token not specified for Dropbox app. Provide your app's App Key or create a new app at https://www.dropbox.com/developers if you don't have an app yet.") unless File.exist?(value)
+                                         UI.user_error!("App Token not specified for Dropbox app. Provide your generated app's App Token or create a new app at https://www.dropbox.com/developers if you don't have an app yet.") unless value && !value.empty?
                                        end),
           FastlaneCore::ConfigItem.new(key: :keychain,
                                        env_name: 'DROPBOX_KEYCHAIN',
