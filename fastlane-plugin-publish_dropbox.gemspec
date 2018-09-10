@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'tommy@twcapps.com'
 
   spec.summary       = 'This plugin  publishes artifacts over to Dropbox via a generated api token from Dropbox Developer API.'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-publish_dropbox"
+  spec.homepage      = "https://github.com/tommy071/fastlane-plugin-publish_dropbox"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
